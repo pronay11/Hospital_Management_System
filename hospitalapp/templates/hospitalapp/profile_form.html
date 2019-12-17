@@ -1,0 +1,72 @@
+<!--Patient Profile information-->
+{%extends "hospitalapp\base.html"%}
+{%block content%}
+{%load crispy_forms_tags%}
+<h1 class="text-center"> Patient Portal</h1>
+<form enctype="multiple/form_data" method ="post">
+{% csrf_token %}
+
+{%if user.profile.img%}
+<img src="{{user.profile.img.url}}" width="250px" alt="image"></br>
+
+{%endif%}</br>
+<!--Patient name,phone-->
+<h2>Name:{{user.username}}</h2>
+<h2>Phone:{{user.profile.phone}}</h2></br>
+
+<h1 class="text-center"> Medical Report</h1></br>
+<div class="container">
+          
+    <table class="table">
+      <thead>
+        <tr>
+          <th>SI.No</th>
+          <th>Service Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>HTSH</td>
+          <td><a href="{{ user.profile.doc.url }}" download> 
+            <button type="button" class="btn btn-indigo btn-lg" style="float:middle;">Download </button></a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Bilirubin</td>
+          <td><a href="{{ user.profile.doc.url }}"download> 
+            <button type="button" class="btn btn-indigo btn-lg" style="float:middle;">Download </button></a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ESR</td>
+          <td><a href="{{ user.profile.doc.url }}" download> 
+            <button type="button" class="btn btn-indigo btn-lg" style="float:middle;">Download </button></a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>ESR</td>
+            <td><a href="{{ user.profile.doc.url }}" download> 
+              <button type="button" class="btn btn-indigo btn-lg" style="float:middle;">Download </button></a></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>ESR</td>
+            <td><a href="{{ user.profile.doc.url }}" download> 
+              <button type="button" class="btn btn-indigo btn-lg" style="float:middle;">Download </button></a></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>ESR</td>
+            <td><a href="{{ user.profile.doc.url }}" download> 
+              <button type="button" class="btn btn-indigo btn-lg" style="float:middle;">Download </button></a></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+</form>
+
+
+{%endblock%}

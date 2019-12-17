@@ -1,0 +1,12 @@
+<!--Patient see his/her notice-->
+{%extends "hospitalapp\base.html"%}
+{%load staticfiles%}
+{%block content%}
+<h1 class="text-center"> NEWS & EVENTS</h1>
+
+{% for n1 in notice_list %}
+<h1>{{n1.subject}} :: {{n1.cr_date | date:"d/m/y"}} 
+<a href='/hospitalapp/notice/{{n1.id}}'>Read More</a> </h1>
+
+{%endfor%}
+{%endblock%}

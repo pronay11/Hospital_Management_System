@@ -1,0 +1,53 @@
+/*change brand font*/
+.navbar-brand{
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 2em;
+    font-weight:bold;
+}
+
+/*Make header image Responsive */
+ .back-image{
+     
+     background-size:cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     min-height: 78px;
+     border-radius: 0px;
+     margin-top: 0px;
+ }
+
+ .carousel-caption {
+    color: rgba(241, 34, 162, 0.932);
+    margin: 0 auto
+    }
+
+.carousel-item{
+    position: relative;
+    text-align: center;
+    }
+ 
+
+.back-image1{
+    height: 350px;
+}
+ 
+
+ /*Change navigation color*/
+ .navbar #myMenu .custom-nav .nav-item a{
+     color:#fff;
+ }
+
+ /*Change hovar color*/
+ .navbar #myMenu .custom-nav .nav-item a:hover{
+    color:#F0AAB1;
+}
+/*Change link color*/
+a{
+    color:#DC3545;
+}
+/*Change HOVAR link color*/
+a:hover{
+    color:#E994A2;
+}
+
+/* font-family: 'Ubuntu', sans-serif; */
